@@ -4,7 +4,6 @@ const config = require('../config');
 const wooCommerceService = {
   async proxyRequest(site, apiPath, method, params, data) {
   
-    
     const siteConfig = config.wooCommerceSites[site];
 
     if (!siteConfig) {

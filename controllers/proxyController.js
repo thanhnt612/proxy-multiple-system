@@ -6,7 +6,8 @@ const proxyController = {
     try {
       const apiPath = req.originalUrl.replace("/api", "");
       const site = req.query.site || req.body.site;
-
+      console.log(req.body,'req.body');
+      
       console.log(`contected to ${site}`);
       
       if (!site) {

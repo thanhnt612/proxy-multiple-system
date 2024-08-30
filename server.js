@@ -8,7 +8,7 @@ const logger = require("./middlewares/loggerMiddleware");
 const apiRoutes = require("./routes/api");
 const webhookRoutes = require("./routes/webhook");
 const socketService = require('./services/socketService');
-
+const configRoutes = require("./routes/config"); // Import route config
 const app = express();
 const httpServer = require('http').createServer(app);
 
@@ -32,6 +32,7 @@ app.use(express.json());
 // Routes
 app.use(apiRoutes);
 app.use(webhookRoutes);
+app.use('/config-web', configRoutes);
 
 // Khởi chạy server
 httpServer.listen(config.port, () => {
