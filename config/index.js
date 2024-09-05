@@ -12,6 +12,11 @@ module.exports = {
         consumerKey: process.env.WOOCOMMERCE_SITE2_CONSUMER_KEY,
         consumerSecret: process.env.WOOCOMMERCE_SITE2_CONSUMER_SECRET,
       },
+      wp_build: {
+        baseUrl: process.env.WOOCOMMERCE_SITE3_BASE_URL,
+        consumerKey: process.env.WOOCOMMERCE_SITE3_CONSUMER_KEY,
+        consumerSecret: process.env.WOOCOMMERCE_SITE3_CONSUMER_SECRET,
+      },
       // Thêm các site khác tương tự
     },
     port: process.env.PORT || 5000,
